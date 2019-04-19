@@ -23,6 +23,11 @@ public class LinkListMethods {
 		return fib(number-1) + fib(number-2);
 	}
 	
+	public int frogSteps(int number) {
+		if (number <= 2) return number;
+		return fib(number-1) + fib(number-2);
+	}
+	
 	public int fibo(int number) {
 		if (number >= 3) {
 			return fib(number-1) + fib(number-2);
@@ -37,6 +42,7 @@ public class LinkListMethods {
 		System.out.println(methods.fact(10));
 		System.out.println(methods.facto(10));
 		System.out.println(methods.fib(5));
+		System.out.println(methods.frogSteps(5));
 		
 //		Link head = null;
 //		Link current = head;
