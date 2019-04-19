@@ -18,11 +18,25 @@ public class LinkListMethods {
 		return total;
 	}
 	
+	public int fib(int number) {
+		if (number <= 1) return number;
+		return fib(number-1) + fib(number-2);
+	}
+	
+	public int fibo(int number) {
+		if (number >= 3) {
+			return fib(number-1) + fib(number-2);
+		} else {
+			return 1;
+		}
+	}
+	
 	public static void main(String[] args) {
 		LinkListMethods methods = new LinkListMethods();
 		
 		System.out.println(methods.fact(10));
 		System.out.println(methods.facto(10));
+		System.out.println(methods.fib(5));
 		
 //		Link head = null;
 //		Link current = head;
