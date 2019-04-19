@@ -2,7 +2,7 @@ package uft.learn;
 
 public class LinkListMethods {
 	
-	public static int fact(int number) {
+	public int fact(int number) {
 		if (number > 1) {
 			return number * fact(number - 1);
 		} else {
@@ -10,7 +10,7 @@ public class LinkListMethods {
 		}
 	}
 	
-	public static int facto(int number) {
+	public int facto(int number) {
 		int total = 1;
 		for (int i = 1; i <= number; i++) {
 			total *= i; 
@@ -19,10 +19,10 @@ public class LinkListMethods {
 	}
 	
 	public static void main(String[] args) {
+		LinkListMethods methods = new LinkListMethods();
 		
-		
-		System.out.println(fact(10));
-		System.out.println(facto(10));
+		System.out.println(methods.fact(10));
+		System.out.println(methods.facto(10));
 		
 //		Link head = null;
 //		Link current = head;
