@@ -39,6 +39,65 @@ public class LinkListMethods {
 	public static void main(String[] args) {
 		LinkListMethods methods = new LinkListMethods();
 		
+		Link head = null;
+		Link current = head;
+		for (int i = 0; i < 10; i++) {
+			if(head == null) {
+				head = new Link(i*2);
+				current = head;
+			} else {
+				current.next = new Link(i*2);
+				current = current.next;
+			}
+		}
+		
+//		current = null;
+//		Link current2 = head;
+//		while (current2 != null) {
+//			if (current == null) {
+//				current2.next = current;
+//				current = current2;
+//				current2 = head.next.next;
+//			} else {
+//			System.out.println(current.data);
+//			current.next.next = current;
+//			current = current2;
+//			current2 = current2.next;
+//			}
+//		}
+//		head = current;
+		
+		current = head;
+		while (current != null) {
+			System.out.println(current.data);
+			current = current.next;
+		}
+		
+		Link front = null;
+		current = head;
+		Link back;
+		
+		while(current != null) {
+			back = current.next;
+			current.next = front;
+			front = current;
+			if (back == null) {
+				head = current;
+				break;
+			}
+			current = back;
+		}
+		
+		
+		
+		current = head;
+		while (current != null) {
+			System.out.println(current.data);
+			current = current.next;
+		}
+		
+		
+		
 		System.out.println(methods.fact(10));
 		System.out.println(methods.facto(10));
 		System.out.println(methods.fib(5));

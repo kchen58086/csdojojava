@@ -16,4 +16,5 @@ public class Link {
 		}
 		return number;
 	}
+	
 }
